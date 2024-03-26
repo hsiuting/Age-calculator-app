@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./css/style.min.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <form action="#">
+    <div class="input-area">
+      <div class="input-day inputs">
+        <label for="day">day</label>
+        <input type="number" name="day" id="day" placeholder="DD" min="1" max="31" oninput="if(value<=0)value=1">
+        <span class="error">Must be a valid date</span>
+      </div>
+      <div class="input-month inputs">
+        <label for="month">month</label>
+        <input type="number" name="month" id="month" placeholder="MM" min="1" max="12" oninput="if(value>12)value=12;if(value<=0)value=1">
+        <span class="error">Must be a valid date</span>
+      </div>
+      <div class="input-year inputs">
+        <label for="day">Year</label>
+        <input type="number" name="year" id="year" placeholder="YYYY" min="1">
+        <span class="error">Must be a valid date</span>
+      </div>
+    </div>
+    <div class="button-area">
+      <hr>
+      <button id="button"><img src="./assets/images/icon-arrow.svg" alt="icon"></button>
+    </div>
+    <div class="age-result">
+      <h1><span class="result-years">--</span>years</h1>
+      <h1><span class="result-months">--</span>months</h1>
+      <h1><span class="result-days">--</span>days</h1>
+    </div>
+  </form>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Hsiuting</a>.
+  </div>
+</body>
+</html>
+<script src="./js/app.js"></script>
